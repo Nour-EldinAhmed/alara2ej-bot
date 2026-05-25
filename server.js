@@ -11,7 +11,8 @@ const { sendMessage, markAsRead } = require('./src/whatsapp-meta');
 const { getStats }       = require('./src/memory');
 
 // ── Validation ────────────────────────────────────────────────────────
-const required = ['OPENROUTER_API_KEY','META_ACCESS_TOKEN','META_PHONE_NUMBER_ID','META_WEBHOOK_VERIFY_TOKEN'];
+//const required = ['OPENROUTER_API_KEY','META_ACCESS_TOKEN','META_PHONE_NUMBER_ID','META_WEBHOOK_VERIFY_TOKEN'];
+const required = ['META_ACCESS_TOKEN','META_PHONE_NUMBER_ID','META_WEBHOOK_VERIFY_TOKEN'];
 const missing  = required.filter(k => !process.env[k] || process.env[k].startsWith('ضع_'));
 if (missing.length) {
   console.error('❌  المتغيرات دي ناقصة في .env:', missing.join(', '));
